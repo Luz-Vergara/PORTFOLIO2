@@ -192,11 +192,11 @@
 </div>
 
 <div class="contact-form">
-    <form action="">
+    <form onsubmit="sendEmail(); reset(); return false;">
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Enter Your Email">
         <textarea name="" id="" cols="30" rows="10" placeholder="Write your message here"></textarea>
-        <input type="button" value="Send" class="contact-button">
+        <input button type="submit" value="Send" class="contact-button">
 
     </form>
 </div>
@@ -204,9 +204,25 @@
 </section>
 
 <div class="copyright">
-    <p>Luz M. Vergara All Right Reserved</p>
+    <p>Luz M. Vergara All Right Reserved 2023</p>
 </div>
 
 <script src="main.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+</script>
 </body>
 </html>
