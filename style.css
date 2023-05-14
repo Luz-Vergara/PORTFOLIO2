@@ -89,7 +89,7 @@ header .navbar a:hover{
     display: flex;
     align-items: center;
     background-color: var(--bg-color);
-    background: url(pic.png) no-repeat;
+    background: url(pics.png) no-repeat;
     background-size: cover;
     background-position: right center;
    
